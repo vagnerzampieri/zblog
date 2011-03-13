@@ -9,3 +9,4 @@ gem 'devise', '1.1.rc2'
 gem 'rspec'
 gem 'rspec-rails'
 gem 'simple_form', '1.3.1'
+gem "mocha", :group => :test
