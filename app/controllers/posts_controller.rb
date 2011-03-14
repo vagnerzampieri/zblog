@@ -33,7 +33,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post was successfully created.'
       respond_with @post
     else
-      render :action => "new"
+      render :action => :new
     end
   end
 
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
       flash[:notice] = 'Post was successfully updated.'
       respond_with @post
     else
-      render :action => "edit"
+      render :action => :edit
     end
   end
 
