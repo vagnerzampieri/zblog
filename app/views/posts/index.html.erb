@@ -14,8 +14,8 @@
 <% @posts.each do |post| %>
   <tr>
     <td><%= post.title %></td>
-    <td><%= post.body %></td>
-    <td><%= post.publication %></td>
+    <td><%= truncate post.body, :length => 20 %></td>
+    <td><%= post.publication.strftime "%Y-%m-%d %H:%M:%S" %></td>
     <td><%= post.enabled %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>

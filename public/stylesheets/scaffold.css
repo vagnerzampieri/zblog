@@ -1,9 +1,35 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #000; color: #000; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+}
+
+th, tr, td {
+  border: solid 1px black;
+}
+  
+container, content {
+  display:block;
+}
+  
+container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #ccc;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+content {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #493233;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
 }
 
 pre {
