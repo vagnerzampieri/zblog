@@ -1,6 +1,6 @@
 <div id="user_nav">
   <% if user_signed_in? %>
-    Logado como <%= avatar_url(current_user) %> <%= current_user.email %>. Não é você?
+    Logado como <%= image_tag avatar_url(current_user) %> <%= current_user.email %>. Não é você?
     <%= link_to 'Sair', destroy_user_session_path %>
     </br>
     <%= link_to 'Post', posts_path %>
