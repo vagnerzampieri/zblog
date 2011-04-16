@@ -1,0 +1,4 @@
+$("#post_<%= @post.id %>").replaceWith("<%= escape_javascript(render(:partial => @post)) %>");
+<% @post = Post.new %>
+$(".simple_form").replaceWith("<%= escape_javascript(render(:partial => "form"))%>")
+$("#new_post")[0].reset();

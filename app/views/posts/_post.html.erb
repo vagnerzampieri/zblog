@@ -1,0 +1,9 @@
+<tr id="post_<%= post.id %>">
+  <td><%= post.title %></td>
+  <td><%= truncate post.body, :length => 20 %></td>
+  <td><%= post.publication.strftime "%Y-%m-%d %H:%M:%S" %></td>
+  <td><%= post.enabled %></td>
+  <td><%= link_to 'Show', post, :remote => true %></td>
+  <td><%= link_to 'Edit', edit_post_path(post), :remote => true %></td>
+  <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete, :remote => true %></td>
+</tr>

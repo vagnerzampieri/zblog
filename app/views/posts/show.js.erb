@@ -1,0 +1,2 @@
+$('#show').empty();
+$('#show').append('<p><b>Title: </b><%= @post.title %></p><p><b>Body: </b><%= @post.body %></p><p><b>Publication: </b><%= @post.publication.strftime "%Y-%m-%d %H:%M:%S" %></p><p><b>Enabled: </b><%= @post.enabled %></p>');

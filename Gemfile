@@ -10,3 +10,4 @@ gem 'rspec'
 gem 'rspec-rails'
 gem 'simple_form', '1.3.1'
 gem "mocha", :group => :test
+gem 'jquery-rails', '0.2.7'

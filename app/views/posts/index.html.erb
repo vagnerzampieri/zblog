@@ -1,6 +1,6 @@
 <h1>Listing posts</h1>
 
-<table>
+<table id="posts">
   <tr>
     <th>Title</th>
     <th>Body</th>
@@ -11,19 +11,17 @@
     <th></th>
   </tr>
 
-<% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= truncate post.body, :length => 20 %></td>
-    <td><%= post.publication.strftime "%Y-%m-%d %H:%M:%S" %></td>
-    <td><%= post.enabled %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<% @posts.each do |post| %>  
+  <%= render post%>
 <% end %>
 </table>
+<br />
+<div id="show">  
+</div>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<div id="form">
+  <h2>Post form</h2>
+<%= render 'form' %>
+</div>

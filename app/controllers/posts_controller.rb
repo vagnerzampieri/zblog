@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order "publication DESC"
+    @post = Post.new
 
     respond_with @posts
   end
@@ -29,12 +30,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new params[:post]
 
-    if @post.save
-      flash[:notice] = 'Post was successfully created.'
-      respond_with @post
-    else
-      render :action => :new
-    end
+    flash[:notice] = 'Post was successfully created.' if @post.save
+    respond_with @post
   end
 
   def update
