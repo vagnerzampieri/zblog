@@ -36,12 +36,8 @@ class PostsController < ApplicationController
   def update
     @post = Post.find params[:id]
 
-    if @post.update_attributes params[:post]
-      flash[:notice] = 'Post was successfully updated.'
-      respond_with @post
-    else
-      render :action => :edit
-    end
+    flash[:notice] = 'Post was successfully updated.' if @post.update_attributes params[:post]
+    respond_with @post
   end
 
   def destroy
