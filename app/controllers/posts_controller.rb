@@ -4,7 +4,6 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order "publication DESC"
-    @post = Post.new
 
     respond_with @posts
   end
